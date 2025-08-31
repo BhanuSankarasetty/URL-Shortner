@@ -16,8 +16,12 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Bitlinks - Your trusted URL shortener",
-  description: "Bitlinks helps you shorten your Urls easily",
+  description: "Bitlinks helps you shorten your URLs easily",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
