@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🔗 BitLinks – Modern URL Shortener
 
-## Getting Started
+BitLinks is a **Next.js 14** powered web application that allows users to shorten long URLs into neat, shareable links.  
+It features a clean UI, responsive design, dynamic routing, and a professional developer experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- ✨ **Shorten URLs** – Generate unique short links with ease.  
+- 📱 **Responsive UI** – Fully optimized for mobile, tablet, and desktop.  
+- 🧭 **Dynamic Routing** – Uses `[shorturl]` in `app/` to handle redirections seamlessly.  
+- 🖥️ **Pages** – Includes Home, About, Contact, and Shorten pages with a consistent theme.  
+- 🎨 **Styled with TailwindCSS** – Clean, modern, and customizable design.  
+- ⚡ **Next.js App Router** – Built using the latest Next.js `app/` directory structure.  
+
+---
+
+## 📂 Project Structure
+
+```
+bitlinks/
+├── app/
+│   ├── [shorturl]/     # Dynamic route for redirecting short links
+│   ├── about/          # About page
+│   ├── contact/        # Contact page
+│   ├── shorten/        # URL shortener form
+│   ├── api/            # API routes for backend logic
+│   ├── layout.js       # Global layout
+│   ├── page.js         # Home page
+│   ├── globals.css     # Global styles
+├── components/         # Reusable React components
+├── public/             # Static assets (icons, images, etc.)
+├── lib/                # Utility functions & helpers
+├── package.json
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Framework: Next.js 14
+ (App Router)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Styling: TailwindCSS
 
-## Learn More
+- State & Routing: Next.js Dynamic & Static Routes
 
-To learn more about Next.js, take a look at the following resources:
+- Utilities: PostCSS, ESLint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Deployment: Vercel / Any Node.js hosting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚡ Dynamic Routing in Action
 
-## Deploy on Vercel
+BitLinks uses Next.js Dynamic Routes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/[shorturl]/page.js
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Each shortened URL generates a dynamic route.
+
+When a user visits https://yourdomain.com/xyz123,
+Next.js captures xyz123 via [shorturl] and redirects to the original long URL.
+
+This makes the system scalable and SEO-friendly.
+
+## 📸 Screenshots (Optional)
+
+### Desktop View
+![Preview Screenshot](./public/desktopview.png)
+
+### Mobile View
+![Preview Screenshot](./public/mobileview.png)
+
+
+## 🚀 Getting Started
+- Clone the repository
+git clone https://github.com/your-username/bitlinks.git
+```
+cd bitlinks
+```
+
+- Install dependencies
+```
+npm install
+```
+
+- Run the development server
+```
+npm run dev
+```
+
+- Now open http://localhost:3000
+
+## 📬 Contact
+
+👨‍💻 Developed by Bhanu Murari
+🔗 GitHub: Bhanu Sankarasetty
+📧 Email: bhanuchiru619@gmail.com 
